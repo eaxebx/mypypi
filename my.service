@@ -1,0 +1,11 @@
+[Unit]
+Description=Aliyun Assist
+
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/sleep 10
+
+[Install]
+WantedBy=multi-user.target
