@@ -1,0 +1,12 @@
+[Unit]
+Description=Subversion Service
+
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/svnserve -d -r /home/svn
+ExecStop=/usr/bin/killall svnserve
+[Install]
+WantedBy=multi-user.target
