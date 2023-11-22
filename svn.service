@@ -6,7 +6,7 @@ Wants=network-online.target
 
 [Service]
 Type=forking
-ExecStart=/usr/bin/svnserve -d -r /home/svn
+ExecStart=/usr/bin/svnserve -d -r /data/svn
 ExecStop=/usr/bin/killall svnserve
 [Install]
 WantedBy=multi-user.target
